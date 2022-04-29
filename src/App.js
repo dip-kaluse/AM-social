@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import SignUp from "./Components/SignUp";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import LogIn from "./Components/LogIn";
+import Feed from "./Components/Feed";
+import Header from "./Components/Header";
+import AddFeed from "./Components/AddFeed";
+// import AddFeed from "./Components/AddFeed";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/" element={<Feed />} />
+        </Routes>
+      </BrowserRouter> */}
+      <AddFeed></AddFeed>
+    </>
   );
+}
+{
+  /* <Route path="/addfeed" element={<AddFeed />} /> */
 }
 
 export default App;
